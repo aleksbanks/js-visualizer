@@ -43,3 +43,16 @@
 .read-the-docs {
 	color: #888;
 }
+
+.app {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.main-content {
+	flex: 1;
+	padding: var(--spacing-xl);
+	background-color: var(--color-background);
+	color: var(--color-text);
+}
