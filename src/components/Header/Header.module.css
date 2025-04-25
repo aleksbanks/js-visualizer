@@ -5,3 +5,7 @@
 	width: 100%;
 	gap: var(--spacing-md);
 }
+
+.header > * {
+	box-shadow: var(--shadow-md) !important;
+}

@@ -19,10 +19,10 @@
 	text-decoration: none;
 	padding: var(--spacing-sm) var(--spacing-md);
 	border-radius: var(--border-radius-sm);
-	transition: all var(--transition-fast);
+	transition: background-color var(--transition-normal) ease-in-out;
 }
 
 .navigation a:hover {
-	background-color: var(--color-primary);
+	background-color: var(--color-primary-hover);
 	color: var(--color-text);
 }
