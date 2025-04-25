@@ -86,6 +86,11 @@
 						"position": "before"
 					},
 					{
+						"pattern": "@/**",
+						"group": "internal",
+						"position": "after"
+					},
+					{
 						"pattern": "**/*.module.css",
 						"group": "type",
 						"position": "after"

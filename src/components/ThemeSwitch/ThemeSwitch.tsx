@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 
+import styles from './ThemeSwitch.module.css'
+
 export const ThemeSwitch = () => {
 	const [isDark, setIsDark] = useState(() => {
 		const savedTheme = localStorage.getItem('theme')
@@ -12,17 +14,13 @@ export const ThemeSwitch = () => {
 			root.setAttribute('data-theme', 'dark')
 			localStorage.setItem('theme', 'dark')
 		} else {
-			root.removeAttribute('data-theme')
+			root.setAttribute('data-theme', 'light')
 			localStorage.setItem('theme', 'light')
 		}
 	}, [isDark])
 
 	return (
-		<button
-			className='theme-switch'
-			onClick={() => setIsDark(!isDark)}
-			aria-label={`Switch to ${isDark ? 'light' : 'dark'} theme`}
-		>
+		<button className={styles.themeSwitch} onClick={() => setIsDark(!isDark)}>
 			{isDark ? '☀️' : '🌙'}
 		</button>
 	)
