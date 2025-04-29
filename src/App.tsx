@@ -4,9 +4,9 @@ import { Route, Routes, useLocation } from 'react-router-dom'
 import { Header } from '@/components/Header/Header'
 import { PageTransition } from '@/components/PageTransition/PageTransition'
 import { About } from '@/pages/About'
+import { EventLoopPage } from '@/pages/EventLoopPage'
 import { Home } from '@/pages/Home'
 import { NotFound } from '@/pages/NotFound'
-import './App.css'
 
 export const App = () => {
 	const location = useLocation()
@@ -30,6 +30,14 @@ export const App = () => {
 							element={
 								<PageTransition>
 									<About />
+								</PageTransition>
+							}
+						/>
+						<Route
+							path='/event-loop'
+							element={
+								<PageTransition>
+									<EventLoopPage />
 								</PageTransition>
 							}
 						/>

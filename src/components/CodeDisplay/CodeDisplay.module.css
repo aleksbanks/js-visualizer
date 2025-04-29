@@ -1,0 +1,104 @@
+.container {
+	background: var(--color-surface);
+	border-radius: var(--border-radius-md);
+	padding: var(--spacing-sm);
+	margin-bottom: var(--spacing-sm);
+	font-family: 'Fira Code', 'Consolas', 'Monaco', 'Andale Mono', monospace;
+	overflow-x: auto;
+	position: relative;
+	min-width: fit-content;
+}
+
+.title {
+	color: var(--color-muted);
+	margin-bottom: var(--spacing-xs);
+	font-size: var(--font-size-sm);
+}
+
+.code {
+	color: var(--color-text);
+	line-height: 1.5;
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xs);
+	position: relative;
+	tab-size: 0;
+	font-size: var(--font-size-sm);
+}
+
+.line {
+	display: flex;
+	align-items: center;
+	min-height: 1.5em;
+	white-space: pre;
+}
+
+.lineNumber {
+	color: var(--color-muted);
+	width: 2em;
+	text-align: right;
+	user-select: none;
+	margin-right: var(--spacing-sm);
+}
+
+.highlight {
+	background: var(--color-primary);
+	color: var(--color-text);
+	border-radius: var(--border-radius-sm);
+}
+
+/* Prism.js theme overrides */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: var(--color-muted);
+}
+
+.token.punctuation {
+	color: var(--color-text);
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: var(--color-error);
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: var(--color-success);
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: var(--color-text);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: var(--color-primary);
+}
+
+.token.function,
+.token.class-name {
+	color: #e6db74;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #fd971f;
+}

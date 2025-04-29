@@ -10,6 +10,9 @@ export const Navigation = () => {
 					<Link to='/'>Home</Link>
 				</li>
 				<li>
+					<Link to='/event-loop'>Event Loop</Link>
+				</li>
+				<li>
 					<Link to='/about'>About</Link>
 				</li>
 			</ul>

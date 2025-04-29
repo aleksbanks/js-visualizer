@@ -10,6 +10,7 @@
 	--color-border: #3f3f46;
 	--color-shadow: rgba(0, 0, 0, 0.3);
 	--color-error: #dc3545;
+	--color-success: #a6e22e;
 	--color-scrollbar-track: #2d2d2d;
 	--color-scrollbar-thumb: #4d4d4d;
 	--color-scrollbar-thumb-hover: #666666;
@@ -36,6 +37,7 @@
 	--transition-fast: 0.1s;
 	--transition-normal: 0.2s;
 	--transition-slow: 0.3s;
+
 	/* Shadows */
 	--shadow-sm: 0 1px 2px var(--color-shadow);
 	--shadow-md: 2px 4px 6px var(--color-shadow);
@@ -55,9 +57,42 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+/* System Color Scheme Preference */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--color-primary: #facc15;
+		--color-bg: #1c1c1c;
+		--color-surface: #27272a;
+		--color-text: #f4f4f5;
+		--color-muted: #a1a1aa;
+		--color-border: #3f3f46;
+		--color-shadow: rgba(0, 0, 0, 0.3);
+		--color-scrollbar-track: #2d2d2d;
+		--color-scrollbar-thumb: #4d4d4d;
+		--color-scrollbar-thumb-hover: #666666;
+		--color-shadow: rgba(250, 204, 21, 0.25);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+		--color-primary: #facc15;
+		--color-bg: #ffffff;
+		--color-surface: #f4f4f5;
+		--color-text: #1f2937;
+		--color-muted: #6b7280;
+		--color-border: #e5e7eb;
+		--color-shadow: rgba(0, 0, 0, 0.05);
+		--color-scrollbar-track: #f1f1f1;
+		--color-scrollbar-thumb: #c1c1c1;
+		--color-scrollbar-thumb-hover: #a8a8a8;
+		--color-shadow: rgba(0, 0, 0, 0.3);
+	}
+}
+
 /* Dark Theme */
 [data-theme='dark'] {
-	--color-primary: #facc15; /* Yellow JS accent */
+	--color-primary: #facc15;
 	--color-bg: #1c1c1c;
 	--color-surface: #27272a;
 	--color-text: #f4f4f5;
@@ -139,6 +174,36 @@ body {
 	font-size: var(--font-size-base);
 }
 
+/* Root Layout */
+#root {
+	max-width: 1280px;
+	margin: 0 auto;
+	padding: 2rem;
+	text-align: center;
+}
+
+/* App Layout */
+.app {
+	display: flex;
+	flex-direction: column;
+	gap: var(--spacing-xl);
+	min-height: 100vh;
+}
+
+.main-content {
+	flex: 1;
+	position: relative;
+	overflow: hidden;
+	padding: var(--spacing-xl);
+	background-color: var(--color-bg);
+	color: var(--color-text);
+}
+
+.main-content > div {
+	width: 100%;
+	height: 100%;
+}
+
 /* Typography */
 h1,
 h2,
@@ -154,7 +219,7 @@ h1 {
 /* Button */
 button {
 	background-color: var(--color-surface);
-	color: black;
+	color: var(--color-text);
 	padding: var(--spacing-sm) var(--spacing-md);
 	border: none;
 	border-radius: var(--border-radius-sm);
@@ -164,7 +229,7 @@ button {
 	transition: background-color var(--transition-fast) ease-in-out;
 }
 
-button:hover {
+button:hover:not(:disabled) {
 	background-color: var(--color-primary-hover);
 }
 
