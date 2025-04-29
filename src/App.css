@@ -21,7 +21,6 @@
 	color: var(--color-text);
 }
 
-/* Ensure the transition container takes full width and height */
 .main-content > div {
 	width: 100%;
 	height: 100%;
